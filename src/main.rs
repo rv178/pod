@@ -4,8 +4,11 @@ use symphonia::core::{
     probe::Hint,
 };
 
-mod utils;
-use utils::{audio::MonoAudio, misc::help};
+mod audio;
+mod misc;
+
+use audio::MonoAudio;
+use misc::help;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
